@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Font Inspector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 300px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #007bff;
+    }
+    #font-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .font-section {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .font-header {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      font-weight: bold;
+      font-size: 16px; /* Prominent sizing */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .font-header:hover {
+      background-color: #e0e0e0;
+    }
+    .font-details {
+      display: none;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      transition: max-height 0.3s ease; /* Smooth expand */
+    }
+    .tag-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag-badge {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px; /* Rounded tags */
+      font-size: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .tag-badge:hover {
+      background-color: #0056b3;
+    }
+    #loading {
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h2>Fonts Used on Page</h2>
+  <div id="loading">Loading fonts...</div>
+  <div id="font-list"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
